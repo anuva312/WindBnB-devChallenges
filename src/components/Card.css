@@ -1,0 +1,60 @@
+.card {
+  max-width: 395px;
+}
+
+img {
+  border-radius: 24px;
+  width: 395px;
+  height: 269px;
+}
+
+.image-container {
+  padding-bottom: 15px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.superhost-button {
+  border: 1px solid #4f4f4f;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: transparent;
+  width: 100px;
+  height: 28px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.info {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #828282;
+}
+.rating {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #4f4f4f;
+  display: flex;
+  align-items: center;
+}
+span {
+  padding: 0 5px;
+}
+.title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+
+  color: #333333;
+}
