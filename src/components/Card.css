@@ -1,6 +1,5 @@
 .card {
-  /* width: 395px; */
-  width: 31%;
+  width: 350px;
   padding: 16px 0;
 }
 
@@ -12,7 +11,7 @@ img {
 
 .image-container {
   padding-bottom: 15px;
-  /* width: inherit; */
+  min-width: 350px;
   height: 269px;
   object-fit: contain;
 }
@@ -66,4 +65,16 @@ span.rating {
   overflow: hidden;
   text-overflow: ellipsis;
   color: #333333;
+}
+.material-icons.star {
+  color: #eb5757;
+}
+
+@media screen and (max-width: 350px) {
+  .card {
+    width: inherit;
+  }
+  .image-container {
+    min-width: inherit;
+  }
 }
