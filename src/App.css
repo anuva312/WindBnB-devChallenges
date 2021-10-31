@@ -10,7 +10,6 @@
   float: left;
   display: flex;
   margin: auto 0px;
-  /* margin: 2% 0; */
 }
 
 .triangle-logo {
@@ -135,10 +134,6 @@
   padding: 5%;
 }
 
-/* .option-content {
-  padding: 2% 0;
-} */
-
 .option-content {
   color: #333333;
   font-weight: bold;
@@ -259,7 +254,7 @@ button {
 
 /* To Make Page Responsive */
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 480px) {
   .search-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -270,7 +265,7 @@ button {
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 480px) {
   .no-display-small {
     display: none;
   }
