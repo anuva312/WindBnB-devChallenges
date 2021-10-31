@@ -225,6 +225,10 @@ button.option-content {
   flex-wrap: wrap;
 }
 
+.cards-placeholder {
+  padding: 8% 0 16% 0;
+}
+
 /* End of Cards */
 
 /* Some General Styles */

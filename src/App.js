@@ -367,7 +367,11 @@ function App() {
 
       {/* Cards */}
       <div className={`card-container`}>
-        {cards.length ? cards : "No Stays Available"}
+        {cards.length ? (
+          cards
+        ) : (
+          <p className="cards-placeholder">No Stays Available</p>
+        )}
       </div>
     </div>
   );
