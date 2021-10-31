@@ -1,8 +1,19 @@
 body {
-  margin: 5%;
+  margin: 5% 5% 0 5%;
   font-family: "Montserrat", sans-serif;
   max-width: 1240px;
 }
+
+footer {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #828282;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
