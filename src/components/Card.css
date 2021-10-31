@@ -70,9 +70,9 @@ span.rating {
   color: #eb5757;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
   .card {
-    width: inherit;
+    width: 98%;
   }
   .image-container {
     min-width: inherit;
