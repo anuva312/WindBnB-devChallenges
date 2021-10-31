@@ -15,3 +15,7 @@ Fulfill user stories below:
 - User story: I can filter properties by location and number of guests
 - User story: I can see the number of filtered items
 - User story: I can see pages following given designs
+
+## Solution
+
+Find the website in action [here](https://silly-goodall-4678a9.netlify.app/)!
