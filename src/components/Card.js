@@ -27,7 +27,7 @@ export default function Card({
         </div>
         {rating ? (
           <div className="rating-container">
-            <span className="material-icons">star</span>
+            <span className="material-icons star">star</span>
             <span className="rating">{rating}</span>
           </div>
         ) : null}
