@@ -1,3 +1,7 @@
+.App {
+  margin: 2.5% 1.5%;
+}
+
 /* Header */
 .header-container {
   display: flex;
