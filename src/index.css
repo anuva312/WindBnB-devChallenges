@@ -14,7 +14,8 @@ body {
   padding: 10px 0 5px 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.footer-container > a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: inherit;
 }
