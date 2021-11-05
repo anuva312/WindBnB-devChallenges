@@ -9,6 +9,7 @@ Solution for the [WindBnB Challenge](https://devchallenges.io/challenges/3JFYedS
 - [Challenge](#challenge)
 - [Solution](#solution)
   - [Demo](#demo)
+  - [Demo Screenshots](#demo-screenshots)
   - [Built With](#built-with)
 - [How to Use](#how-to-use)
 - [Acknowledgements](#acknowledgements)
@@ -31,21 +32,30 @@ Fulfill user stories below:
 
 ## Solution
 
+### Demo
+
 Find the website in action [here](https://silly-goodall-4678a9.netlify.app/)!
 
+### Demo Screenshots
+
 Home Page
+
 ![screenshot-random-quote](src/images/screenshot-home.PNG)
 
 Filter By Location
+
 ![screenshot-quotes-by-author](src/images/add-location.PNG)
 
 Filter By No.of Guests
+
 ![screenshot-quotes-by-author](src/images/add-guests.PNG)
 
 Filter-Results
+
 ![screenshot-quotes-by-author](src/images/search-result.PNG)
 
 Mobile View
+
 ![screenshot-quotes-by-author](src/images/mobile-view.PNG)
 
 ### Built With
