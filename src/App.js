@@ -163,145 +163,149 @@ function App() {
       {/* Drawer */}
       {drawerOpen ? (
         <div className={`drawer`} ref={dropdownRef}>
-          {/* Header Box */}
-          <div className="drawer-header no-display-big">
-            <span>Edit your search</span>
-            <span class="material-icons" onClick={() => setDrawerOpen(false)}>
-              close
-            </span>
-          </div>
-          {/* Search Box */}
-          <div className="search-box">
-            <button
-              id="select-location"
-              className="select-button"
-              onClick={() => {
-                setShowLocationOptions(true);
-                setShowGuestCountOptions(false);
-              }}
-            >
-              <div className="button-name">Location</div>
-              {selected_location ? (
-                <div>{selected_location}</div>
-              ) : (
-                <div className="placeholder">Add Location</div>
-              )}
-            </button>
+          <div className={`drawer-contents`}>
+            {/* Header Box */}
+            <div className="drawer-header no-display-big">
+              <span>Edit your search</span>
+              <span class="material-icons" onClick={() => setDrawerOpen(false)}>
+                close
+              </span>
+            </div>
+            {/* Search Box */}
+            <div className="search-box">
+              <button
+                id="select-location"
+                className="select-button"
+                onClick={() => {
+                  setShowLocationOptions(true);
+                  setShowGuestCountOptions(false);
+                }}
+              >
+                <div className="button-name">Location</div>
+                {selected_location ? (
+                  <div>{selected_location}</div>
+                ) : (
+                  <div className="placeholder">Add Location</div>
+                )}
+              </button>
 
-            <button
-              id="select-guests"
-              className="select-button"
-              onClick={() => {
-                setShowLocationOptions(false);
-                setShowGuestCountOptions(true);
-              }}
-            >
-              <div className="button-name">Guests</div>
-              {adultCount || childCount ? (
-                <div>{`${adultCount + childCount} Guests`}</div>
-              ) : (
-                <div className="placeholder">Add Guests</div>
-              )}
-            </button>
+              <button
+                id="select-guests"
+                className="select-button"
+                onClick={() => {
+                  setShowLocationOptions(false);
+                  setShowGuestCountOptions(true);
+                }}
+              >
+                <div className="button-name">Guests</div>
+                {adultCount || childCount ? (
+                  <div>{`${adultCount + childCount} Guests`}</div>
+                ) : (
+                  <div className="placeholder">Add Guests</div>
+                )}
+              </button>
 
-            <button className="select-button set-values">
-              <button class="search-button" onClick={() => onSubmit()}>
+              <button className="select-button set-values">
+                <button class="search-button" onClick={() => onSubmit()}>
+                  <div className="flex-container">
+                    <span className="material-icons">search</span>
+                    <span className="icon-text">Search</span>
+                  </div>
+                </button>
+              </button>
+            </div>
+            {/* End of Search Box */}
+
+            {/* Filter Options */}
+            <div className="search-container">
+              {/* For Location */}
+              <div
+                className={`select-location-container ${
+                  !showLocationOptions ? "no-display-small" : ""
+                }`}
+              >
+                {showLocationOptions ? (
+                  <div>
+                    {locationList.map((location_name) => (
+                      <div
+                        className="select-location-options flex-container"
+                        onClick={() => setSelectedLocation(location_name)}
+                      >
+                        <span className="material-icons">place</span>
+                        <span className="icon-text">{location_name}</span>{" "}
+                      </div>
+                    ))}
+                    <div
+                      className="select-location-options flex-container"
+                      onClick={() => setSelectedLocation(null)}
+                    >
+                      <span className="material-icons">place</span>
+                      <span className="icon-text">Any</span>{" "}
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+
+              {/* For Guests */}
+              <div className="select-guests-container">
+                {showGuestCountOptions ? (
+                  <div>
+                    <div className="select-guests-options">
+                      <div className="option-content option-title">Adults</div>
+                      <div className="placeholder">Ages 13 or above</div>
+                      <div>
+                        <button
+                          className="option-content"
+                          onClick={() => setAdultCount(adultCount - 1)}
+                          disabled={adultCount <= 0}
+                        >
+                          -
+                        </button>
+                        <span className="option-content">{adultCount}</span>
+                        <button
+                          className="option-content"
+                          onClick={() => setAdultCount(adultCount + 1)}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div className="select-guests-options">
+                      <div className="option-content option-title">
+                        Children
+                      </div>
+                      <div className="placeholder">Ages 2-12</div>
+                      <div>
+                        <button
+                          className="option-content"
+                          onClick={() => setChildCount(childCount - 1)}
+                          disabled={childCount <= 0}
+                        >
+                          -
+                        </button>
+                        <span className="option-content">{childCount}</span>
+                        <button
+                          className=" option-content"
+                          onClick={() => setChildCount(childCount + 1)}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+              {/* Submit Button visible only in small screens */}
+              <button
+                class="search-button no-display-big"
+                onClick={() => onSubmit()}
+              >
                 <div className="flex-container">
                   <span className="material-icons">search</span>
                   <span className="icon-text">Search</span>
                 </div>
               </button>
-            </button>
-          </div>
-          {/* End of Search Box */}
-
-          {/* Filter Options */}
-          <div className="search-container">
-            {/* For Location */}
-            <div
-              className={`select-location-container ${
-                !showLocationOptions ? "no-display-small" : ""
-              }`}
-            >
-              {showLocationOptions ? (
-                <div>
-                  {locationList.map((location_name) => (
-                    <div
-                      className="select-location-options flex-container"
-                      onClick={() => setSelectedLocation(location_name)}
-                    >
-                      <span className="material-icons">place</span>
-                      <span className="icon-text">{location_name}</span>{" "}
-                    </div>
-                  ))}
-                  <div
-                    className="select-location-options flex-container"
-                    onClick={() => setSelectedLocation(null)}
-                  >
-                    <span className="material-icons">place</span>
-                    <span className="icon-text">Any</span>{" "}
-                  </div>
-                </div>
-              ) : null}
             </div>
-
-            {/* For Guests */}
-            <div className="select-guests-container">
-              {showGuestCountOptions ? (
-                <div>
-                  <div className="select-guests-options">
-                    <div className="option-content option-title">Adults</div>
-                    <div className="placeholder">Ages 13 or above</div>
-                    <div>
-                      <button
-                        className="option-content"
-                        onClick={() => setAdultCount(adultCount - 1)}
-                        disabled={adultCount <= 0}
-                      >
-                        -
-                      </button>
-                      <span className="option-content">{adultCount}</span>
-                      <button
-                        className="option-content"
-                        onClick={() => setAdultCount(adultCount + 1)}
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                  <div className="select-guests-options">
-                    <div className="option-content option-title">Children</div>
-                    <div className="placeholder">Ages 2-12</div>
-                    <div>
-                      <button
-                        className="option-content"
-                        onClick={() => setChildCount(childCount - 1)}
-                        disabled={childCount <= 0}
-                      >
-                        -
-                      </button>
-                      <span className="option-content">{childCount}</span>
-                      <button
-                        className=" option-content"
-                        onClick={() => setChildCount(childCount + 1)}
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ) : null}
-            </div>
-            {/* Submit Button visible only in small screens */}
-            <button
-              class="search-button no-display-big"
-              onClick={() => onSubmit()}
-            >
-              <div className="flex-container">
-                <span className="material-icons">search</span>
-                <span className="icon-text">Search</span>
-              </div>
-            </button>
           </div>
         </div>
       ) : null}

@@ -6,7 +6,7 @@
 .header-container {
   display: flex;
   justify-content: space-between;
-  margin: auto 3.4%;
+  margin: auto 4.8%;
   flex-wrap: wrap;
 }
 
@@ -51,6 +51,11 @@
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
   font-family: "Mulish";
   font-style: normal;
+}
+
+.drawer-contents {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* Search box with three options */
@@ -195,7 +200,7 @@ button.option-content {
 
 /* Main Heading Div */
 .title-container {
-  margin: 0 3.4%;
+  margin: 0 4.8%;
   margin-top: 5%;
   font-style: normal;
   display: flex;
