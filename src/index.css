@@ -2,6 +2,8 @@ body {
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   max-width: 1400px;
+  min-height: 100vh;
+  position: relative;
 }
 
 .footer-container {
@@ -11,7 +13,9 @@ body {
   font-size: 14px;
   color: #828282;
   text-align: center;
-  padding: 10px 0 5px 0;
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
 }
 
 .footer-container > a {
