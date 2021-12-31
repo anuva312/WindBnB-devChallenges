@@ -14,6 +14,7 @@
   float: left;
   display: flex;
   margin: auto 0px;
+  cursor: pointer;
 }
 
 .triangle-logo {
@@ -114,6 +115,10 @@
   border-radius: 16px;
   align-items: center;
   padding: 0 5%;
+  transition: 0.3s;
+}
+.search-button:hover {
+  opacity: 0.8;
 }
 /* End of Search Box */
 
