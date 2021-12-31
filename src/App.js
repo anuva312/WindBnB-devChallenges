@@ -312,7 +312,16 @@ function App() {
 
       {/* Header */}
       <header className="header-container">
-        <div className="logo-container">
+        <div
+          className="logo-container"
+          onClick={() => {
+            setLocation(null);
+            setSelectedLocation(null);
+            setGuestCount(0);
+            setAdultCount(0);
+            setChildCount(0);
+          }}
+        >
           <span className="triangle-logo"></span>
           <i className="fas fa-triangle"></i>
           <span className="logo-name">windbnb</span>
