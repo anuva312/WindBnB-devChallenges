@@ -1,6 +1,6 @@
 # Windbnb
 
-Solution for the [WindBnB Challenge](https://devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD) from [Devchallenges.io](https://devchallenges.io).
+Solution for the [WindBnB Challenge](https://legacy.devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD) from [Devchallenges.io](https://devchallenges.io).
 
 <!-- TABLE OF CONTENTS -->
 
